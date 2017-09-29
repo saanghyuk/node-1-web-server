@@ -47,7 +47,11 @@ app.get('/about', (req, res) => {
         pageTitle: 'About Page',
     });
 });
-
+app.get('/portfolio', (req, res)=>{
+    res.render('portfolio.hbs', {
+        pageTitle: 'Sanghyuk\'s Portfolio'
+    })
+});
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
     res.send({
